@@ -4,7 +4,8 @@
 def recursive_max(ls):
     if len(ls) == 1:
         return ls[0]
-    return recursive_max(ls[1:])
+    max_rest =  recursive_max(ls[1:])
+    return ls[0] if ls[0] > max_rest else max_rest
 
 
 
