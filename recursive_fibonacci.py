@@ -7,7 +7,16 @@ def fibonacci(n):
         return 1
     return fibonacci(n-2) + fibonacci(n-1)
 
-
-n = int(input("enter a number: "))
-for i in range(1, n+1):
-    print(fibonacci(i))
+try:
+    n = int(input("enter a number: "))
+    if n < 0:
+         raise ValueError("⚠️ please enter positive number! ⚠️")
+except ValueError as ve:
+    print(f"❌ Input Error:", {ve}, "❌")  
+except RecursionError:
+    print("❌ Input is too large! Maximum recursion depth exceeded. ❌")
+except Exception as e:
+    print(f"hmmm ⚠️ Unexpected Error: {e} ⚠️")    
+else:
+    for i in range(n+1):
+        print(fibonacci(i))
