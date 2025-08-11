@@ -24,4 +24,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"⚠️ Unexpected Error: {e} ⚠️")    
     else:
-        print(f"gcd = {gcd(num1, num2)} and lcm = {lcm(num1, num2)}")
+        print(f"✅ GCD({num1}, {num2}) = {gcd(num1, num2)}")
+        print(f"✅ LCM({num1}, {num2}) = {lcm(num1, num2)}")
