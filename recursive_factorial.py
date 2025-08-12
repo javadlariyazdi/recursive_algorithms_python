@@ -14,7 +14,7 @@ if __name__ == "__main__":
             raise ValueError("⚠️ please enter a non-negative number! ⚠️")
         result = factorial(n)
     except ValueError as ve:
-        print(f"❌ Input Error:", {ve}, "❌")  
+        print(f"❌ Input Error: {ve} ❌")  
     except RecursionError:
         print("❌ Input is too large! Maximum recursion depth exceeded. ❌")
     except Exception as e:
