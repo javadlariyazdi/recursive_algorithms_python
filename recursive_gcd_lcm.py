@@ -18,7 +18,7 @@ if __name__ == "__main__":
         if num1 <= 0 or num2 <= 0:
             raise ValueError("⚠️ please enter positive number! ⚠️")
     except ValueError as ve:
-        print(f"❌ Input Error:", {ve}, "❌")  
+        print(f"❌ Input Error: {ve} ❌")  
     except RecursionError:
         print("❌ Input is too large! Maximum recursion depth exceeded. ❌")
     except Exception as e:
