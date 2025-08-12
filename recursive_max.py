@@ -8,12 +8,21 @@ def recursive_max(ls):
     return ls[0] if ls[0] > max_rest else max_rest
 
 
-
-ls = []
-while True:
-    n = int(input("enter max number in list (for exit enter 0): "))
-    if n == 0:
-        break
-    ls.append(n)
-
-print(recursive_max(ls))
+if __name__ == "__main__":
+    ls = []
+    try:
+        while True:
+            n = int(input("enter max number in list (for exit enter 0): "))
+            if n == 0:
+                break
+            ls.append(n)
+    except ValueError as ve:
+        print(f"❌ Input Error: {ve} ❌")  
+    except RecursionError:
+        print("❌ Input is too large! Maximum recursion depth exceeded. ❌")
+    except Exception as e:
+        print(f"⚠️ Unexpected Error: {e} ⚠️")       
+    if ls:
+        print(f"✅ Maximum number is: {recursive_max(ls)}")
+    else:
+        print("⚠️ No numbers entered.")
