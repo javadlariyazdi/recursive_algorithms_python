@@ -1,6 +1,7 @@
 #recursive_fibonacci
 
 def fibonacci(n):
+    """Return the n-th Fibonacci number recursively, starting from 1."""
     if n == 0:
         return 1
     if n == 1:
