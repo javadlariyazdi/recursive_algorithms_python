@@ -2,6 +2,7 @@
 #recursive_max_number_in_list
 
 def recursive_max(ls):
+    """Return the maximum number in a list recursively."""
     if len(ls) == 1:
         return ls[0]
     max_rest =  recursive_max(ls[1:])
